@@ -1,27 +1,125 @@
 # Angular2022
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+## A.Core
 
-## Development server
+### Component
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [ ] Lifecycle
+- [ ] View Encapsulation
+- [ ] Change Detection
+- [ ] Component Interaction
+- [ ] Sharing Data Between child and parents
+- [ ] Content Projection: single slot, multi slot
+- [ ] Dynamic Component
+- [ ] Angular Element
 
-## Code scaffolding
+### Template
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Template Interpolation, Pipes, Property Binding, AttrClassStyle Binding
+- Event binding
+- Two way bindings
+- Template References
 
-## Build
+### Directives
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Component : component
+- Attribute : style
+- Structural : logic
 
-## Running unit tests
+### Dependencies Injection
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Sample
+- Design Pattern
+- Angular Circular DI
 
-## Running end-to-end tests
+### Routes
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [ ] Fundamentals
 
-## Further help
+### Forms
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [ ] Reactive Forms
+- [ ] Template Driven
+
+### HTTP Client
+
+- [ ] Fundamentals
+
+### Testing
+
+- [ ] Fundamentals
+
+### I18n
+
+- [ ] Fundamentals
+
+### Service Worker
+
+- [ ] Fundamentals
+
+### PWA
+
+- [ ] Fundamentals
+
+### Web Worker
+
+- [ ] Fundamentals
+
+### SSR
+
+- [ ] Fundamentals
+
+### Prerending
+
+- [ ] Fundamentals
+
+### Best Practice
+
+- [ ] Checklist
+
+### Devtools
+
+- [ ] Checklist
+
+### Coding Style guide
+
+- [ ] Checklist
+
+### RXJS
+
+- [ ] Checklist
+
+### Creating Angular Lib
+
+- [ ] Checklist
+
+## B. Built-in Tools
+
+...
+
+## C. Built-in Solutions
+
+...
+
+# Angular Courses
+
+## Newbie
+
+1. Fundamentals
+2. Advanced
+
+## Mid Level
+
+1. Built-in tools
+2. Built-in solution
+
+## Senior
+
+1. Performance
+2. Security
+
+## Lead
+
+1. Architecture
+2. Workflow
+3. Micro frontend
