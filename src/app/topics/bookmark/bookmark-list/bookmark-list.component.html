@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <td scope="col" data-colname="name">Name</td>
+              <td scope="col" data-colname="link">Link</td>
+              <td scope="col" data-colname="group">Group</td>
+              <td scope="col" data-colname="action">Action</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items;">
+              <td scope="row">Link A</td>
+              <td scope="row">Link A</td>
+              <td scope="row">Link A</td>
+              <td scope="row" data-colname="action">
+                <div>
+                  <button class="btn-icon" title="Edit">
+                    <span class="material-icons icon icon-warning">edit</span>
+                  </button>
+                  <button class="btn-icon" title="Delete">
+                    <span class="material-icons icon icon-danger">delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,6 @@ export class ListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.links = [{ title: 'Lifecycle', path: '/lifecycle' }];
+    this.links = [{ title: 'Bookmark', path: '/bookmarks' }];
   }
 }

@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LifecycleComponent } from './topics/lifecycle/lifecycle.component';
+
 import { ListComponent } from './topics/list/list.component';
 
 const routes: Routes = [
-  { path: '', component: ListComponent },
-  { path: 'lifecycle', component: LifecycleComponent },
+  {
+    path: '',
+    component: ListComponent,
+  },
+  {
+    path: 'bookmarks',
+    loadChildren: () =>
+      import('./topics/bookmark/bookmark.module').then((m) => m.BookmarkModule),
+  },
 ];
 
 @NgModule({
