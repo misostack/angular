@@ -1,5 +1,7 @@
 # Angular2022
 
+- [Notes for Professional](https://gist.github.com/misostack/34c91c01eb462ec0bcfa8ecd468de048)
+
 ## A.Core
 
 ### Component
