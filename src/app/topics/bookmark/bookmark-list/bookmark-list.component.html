@@ -2,7 +2,12 @@
   <div class="row">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-title">Card title {{theObject.name}}</h5>
+        <p>{{currentMessage}}</p>
+        <app-bookmark-colors></app-bookmark-colors>
+        <button (click)="onBookmarkListBtnClick($event)">Trigger click in children</button>
+        <app-bookmark-counter #bookmarkCounterComp class="active" (counterClicked)="onCounterClicked($event)"
+          [name]="''" [count]="items.length" [items]="items"></app-bookmark-counter>
         <table class="table table-striped">
           <thead>
             <tr>

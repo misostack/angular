@@ -34,3 +34,7 @@
 - Reactive Forms
 - Form Validation
 - HTTP Client
+
+## References
+
+- https://www.digitalocean.com/community/tutorials/angular-change-detection-strategy

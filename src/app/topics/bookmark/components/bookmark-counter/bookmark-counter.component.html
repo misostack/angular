@@ -1,0 +1,6 @@
+<h4>Name: {{name}}</h4>
+<button (click)="onClick($event)"
+  [ngClass]="{'btn':true,'btn-primary': isFirstChanged, 'btn-secondary': !isFirstChanged}">Number of
+  BookMarkItems:<strong>{{count}}</strong></button>
+<p>Username: <input #usernameInput type="text" name="username" [(ngModel)]="username" /></p>
+<h5 *ngFor="let item of items">{{item.id}}</h5>
