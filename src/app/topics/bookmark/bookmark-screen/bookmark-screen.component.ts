@@ -5,7 +5,7 @@ import { BookmarkService } from '../services/bookmark.service';
   selector: 'app-bookmark-screen',
   templateUrl: './bookmark-screen.component.html',
   styles: [],
-  providers: [BookmarkService],
+  // providers: [BookmarkService],
 })
 export class BookmarkScreenComponent implements OnInit, DoCheck {
   constructor() {}

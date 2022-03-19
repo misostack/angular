@@ -10,7 +10,7 @@ import {
   TemplateRef,
   ViewChild,
 } from '@angular/core';
-import { interval, map } from 'rxjs';
+import { interval, map, Subscription } from 'rxjs';
 import { BookmarkCounterComponent } from '../components/bookmark-counter/bookmark-counter.component';
 import { Bookmark, BookmarkGroup } from '../models/bookmark';
 import { BookmarkService } from '../services/bookmark.service';
@@ -30,6 +30,7 @@ export class BookmarkListComponent
   theObject: { name: string } = { name: '' };
   @ViewChild('bookmarkCounterComp')
   bookmarkCounterComponent!: BookmarkCounterComponent;
+  subscription: Subscription;
 
   items: Array<{ id: number }> = Array.from(new Array(10)).map((_, idx) => {
     return {
@@ -39,11 +40,15 @@ export class BookmarkListComponent
 
   constructor(private bookmarkService: BookmarkService) {
     console.error('1.constructor');
-    this.bookmarkService.newMessage$.subscribe((message) => {
-      this.messageCount += 1;
-      this.currentMessage = message;
-      console.error(this.messageCount);
-    });
+    console.error('Number of subscribers', this.bookmarkService.newMessage$);
+
+    this.subscription = this.bookmarkService.newMessage$.subscribe(
+      (message) => {
+        this.messageCount += 1;
+        this.currentMessage = message;
+        console.error(this.messageCount);
+      }
+    );
   }
   ngAfterViewChecked(): void {
     console.error('Bookmark list ngAfterViewChecked');
@@ -90,5 +95,10 @@ export class BookmarkListComponent
   onCounterClicked(value: string) {
     console.error(value);
     this.theObject.name = value;
+  }
+
+  ngOnDestroy() {
+    // prevent memory leak when component destroyed
+    this.subscription.unsubscribe();
   }
 }

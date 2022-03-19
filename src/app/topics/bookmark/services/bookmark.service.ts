@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { BookmarkGroup } from '../models/bookmark';
 
-// @Injectable({
-//   providedIn: 'root',
-// })
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
+// @Injectable()
 export class BookmarkService {
   // observable string sources
   private newMessageSource = new Subject<string>();
