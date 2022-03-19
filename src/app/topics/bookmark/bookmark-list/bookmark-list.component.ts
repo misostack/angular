@@ -12,6 +12,7 @@ import {
 } from '@angular/core';
 import { interval, map, Subscription } from 'rxjs';
 import { BookmarkCounterComponent } from '../components/bookmark-counter/bookmark-counter.component';
+import { BookmarkFormComponent } from '../components/bookmark-form/bookmark-form.component';
 import { Bookmark, BookmarkGroup } from '../models/bookmark';
 import { BookmarkService } from '../services/bookmark.service';
 
@@ -31,6 +32,8 @@ export class BookmarkListComponent
   @ViewChild('bookmarkCounterComp')
   bookmarkCounterComponent!: BookmarkCounterComponent;
   subscription: Subscription;
+
+  @ViewChild('bookmarkForm') bookmarkForm!: BookmarkFormComponent;
 
   items: Array<{ id: number }> = Array.from(new Array(10)).map((_, idx) => {
     return {
@@ -95,6 +98,10 @@ export class BookmarkListComponent
   onCounterClicked(value: string) {
     console.error(value);
     this.theObject.name = value;
+  }
+
+  addNewBookmark() {
+    this.bookmarkForm.open();
   }
 
   ngOnDestroy() {

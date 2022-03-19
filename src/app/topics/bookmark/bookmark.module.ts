@@ -11,6 +11,7 @@ import {
   BookmarkColorsComponent,
   NoEncapsulationComponent,
 } from './components/bookmark-colors/bookmark-colors.component';
+import { BookmarkFormComponent } from './components/bookmark-form/bookmark-form.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {
     BookmarkCounterComponent,
     BookmarkColorsComponent,
     NoEncapsulationComponent,
+    BookmarkFormComponent,
   ],
   imports: [CommonModule, BookmarkRoutingModule, FormsModule],
 })

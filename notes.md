@@ -133,3 +133,29 @@ Everytime, user move to another screen and go back to the screen contain this co
 **Global styles**
 
 ![image](https://user-images.githubusercontent.com/31009750/159120574-e5da62fc-b984-49d3-9213-e0298628a1bd.png)
+
+## Component Communication
+
+### 1. Open Modal ( Modal is children Component )
+
+![image](https://user-images.githubusercontent.com/31009750/159121489-552c16b6-a5a6-4108-9f84-16d215bdcde6.png)
+![image](https://user-images.githubusercontent.com/31009750/159121497-efc4e927-3cc3-4cbe-b662-d6f6d6f13de1.png)
+
+**Event Listener**
+
+![image](https://user-images.githubusercontent.com/31009750/159121531-6508a7b1-3972-4778-a542-11bd19d2e6d5.png)
+
+**Key Press Listener**
+
+![image](https://user-images.githubusercontent.com/31009750/159121547-05ce3e8d-1436-47b3-93f1-e0fc2ddfc88c.png)
+
+**FullList Event**
+
+https://github.com/angular/angular/blob/master/packages/compiler/src/schema/dom_element_schema_registry.ts#L78
+
+> Search "click" or "keypress"
+
+**Parent**
+![image](https://user-images.githubusercontent.com/31009750/159121640-b4962de3-9e62-4e83-9dd3-7db3f305c4c2.png)
+![image](https://user-images.githubusercontent.com/31009750/159121647-8714ac98-cb05-40d7-9240-690312ec6c31.png)
+![image](https://user-images.githubusercontent.com/31009750/159121657-5bef5ef6-bf5c-4ee9-a296-ad6e41a918ea.png)
