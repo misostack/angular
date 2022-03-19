@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { BookmarkGroup } from '../models/bookmark';
+import { Bookmark, BookmarkGroup } from '../models/bookmark';
 
 @Injectable({
   providedIn: 'root',
@@ -33,5 +33,25 @@ export class BookmarkService {
     });
 
     return bookmarkGroups;
+  }
+
+  getBookmarks(): Array<Bookmark> {
+    const bookmarks: Array<Bookmark> = [];
+    const links = [
+      { title: 'Google', link: 'https://google.com' },
+      { title: 'Facebook', link: 'https://facebook.com' },
+      { title: 'Youtube', link: 'https://youtube.com' },
+      { title: 'JSBaseVietnam', link: 'https://jsbasevietnam.com' },
+      { title: 'NextJSVietnam', link: 'https://nextjsvietnam.com' },
+    ];
+    links.forEach((link, idx) => {
+      bookmarks.push(
+        new Bookmark(
+          { ...link, id: idx + 1 },
+          new BookmarkGroup({ id: 1, name: 'Business' })
+        )
+      );
+    });
+    return bookmarks;
   }
 }

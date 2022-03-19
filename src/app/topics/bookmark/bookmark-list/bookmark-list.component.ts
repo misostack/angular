@@ -13,7 +13,7 @@ import {
 import { interval, map, Subscription } from 'rxjs';
 import { BookmarkCounterComponent } from '../components/bookmark-counter/bookmark-counter.component';
 import { BookmarkFormComponent } from '../components/bookmark-form/bookmark-form.component';
-import { Bookmark, BookmarkGroup } from '../models/bookmark';
+import { Bookmark, BookmarkGroup, BookmarkObject } from '../models/bookmark';
 import { BookmarkService } from '../services/bookmark.service';
 
 @Component({
@@ -31,27 +31,26 @@ export class BookmarkListComponent
   theObject: { name: string } = { name: '' };
   @ViewChild('bookmarkCounterComp')
   bookmarkCounterComponent!: BookmarkCounterComponent;
-  subscription: Subscription;
+  // subscription: Subscription;
 
   @ViewChild('bookmarkForm') bookmarkForm!: BookmarkFormComponent;
 
-  items: Array<{ id: number }> = Array.from(new Array(10)).map((_, idx) => {
-    return {
-      id: idx + 1,
-    };
-  });
+  // items: Array<{ id: number }> = Array.from(new Array(10)).map((_, idx) => {
+  //   return {
+  //     id: idx + 1,
+  //   };
+  // });
 
   constructor(private bookmarkService: BookmarkService) {
-    console.error('1.constructor');
-    console.error('Number of subscribers', this.bookmarkService.newMessage$);
-
-    this.subscription = this.bookmarkService.newMessage$.subscribe(
-      (message) => {
-        this.messageCount += 1;
-        this.currentMessage = message;
-        console.error(this.messageCount);
-      }
-    );
+    // console.error('1.constructor');
+    // console.error('Number of subscribers', this.bookmarkService.newMessage$);
+    // this.subscription = this.bookmarkService.newMessage$.subscribe(
+    //   (message) => {
+    //     this.messageCount += 1;
+    //     this.currentMessage = message;
+    //     console.error(this.messageCount);
+    //   }
+    // );
   }
   ngAfterViewChecked(): void {
     console.error('Bookmark list ngAfterViewChecked');
@@ -70,6 +69,7 @@ export class BookmarkListComponent
     console.error('2.ngOnInit');
     // fetch data
     this.bookmarkGroups = this.bookmarkService.getBookmarkGroups();
+    this.bookmarks = this.bookmarkService.getBookmarks();
     // run only once
     // setInterval(() => {
     //   // this.items = Array.from(new Array(Math.floor(Math.random() * 10) + 10));
@@ -101,11 +101,17 @@ export class BookmarkListComponent
   }
 
   addNewBookmark() {
-    this.bookmarkForm.open();
+    this.bookmarkForm.add();
+  }
+  editBookmark(bookmark: Bookmark) {
+    this.bookmarkForm.edit(bookmark);
+  }
+  deleteBookmark(bookmark: Bookmark) {
+    this.bookmarks = this.bookmarks.filter((b) => b.id != bookmark.id);
   }
 
   ngOnDestroy() {
     // prevent memory leak when component destroyed
-    this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 }

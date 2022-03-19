@@ -1,9 +1,18 @@
 type ID = string | number;
 export interface BookmarkDTO {
-  id: string;
+  id: ID;
   title: string;
   link: string;
-  group: ID;
+}
+
+export interface BookmarkObject {
+  id: ID;
+  title: string;
+  link: string;
+  group: {
+    id: ID;
+    name: string;
+  };
 }
 
 export interface BookmarkGroupDTO {
@@ -43,7 +52,7 @@ export class Bookmark {
     this.group = group;
   }
 
-  toObject() {
+  toObject(): BookmarkObject {
     return {
       id: this.id,
       title: this.title,
