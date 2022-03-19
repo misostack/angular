@@ -6,10 +6,10 @@
 
 ### Component
 
-- [ ] Lifecycle
-- [ ] View Encapsulation
-- [ ] Change Detection
-- [ ] Component Interaction
+- [x] Lifecycle
+- [x] View Encapsulation
+- [x] Change Detection
+- [x] Component Interaction
 - [ ] Sharing Data Between child and parents
 - [ ] Content Projection: single slot, multi slot
 - [ ] Dynamic Component
