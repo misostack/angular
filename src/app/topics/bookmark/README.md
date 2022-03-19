@@ -13,11 +13,12 @@
 
 ## What you will learn
 
-- Component
-- Lifecycle hooks
-- Text Interpolation
-- Component Communication: Binding, ViewChild, DI Service
+- [x] Component
+- [x] Lifecycle hooks
+- [x] Text Interpolation
+- [x] Component Communication: Binding, ViewChild, DI Service
 - Component Styles
+- Sharing data between child and parent directives and components
 - Ng-Content
 - Template Statements
 - Pipes
