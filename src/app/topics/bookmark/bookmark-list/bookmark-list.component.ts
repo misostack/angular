@@ -109,6 +109,20 @@ export class BookmarkListComponent
   deleteBookmark(bookmark: Bookmark) {
     this.bookmarks = this.bookmarks.filter((b) => b.id != bookmark.id);
   }
+  savedBookmark(data: { mode: 'add' | 'edit'; bookmark: Bookmark }) {
+    const { mode, bookmark } = data;
+    if (mode === 'add') {
+      this.bookmarks.push(bookmark);
+    } else {
+      console.error('edit');
+      for (let i = 0; i < this.bookmarks.length; i++) {
+        console.error(bookmark.id, 'vs', this.bookmarks[i].id);
+        if (this.bookmarks[i].id == bookmark.id) {
+          this.bookmarks[i] = bookmark;
+        }
+      }
+    }
+  }
 
   ngOnDestroy() {
     // prevent memory leak when component destroyed

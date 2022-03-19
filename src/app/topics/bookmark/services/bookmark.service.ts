@@ -26,7 +26,7 @@ export class BookmarkService {
     groups.forEach((g, idx) => {
       bookmarkGroups.push(
         new BookmarkGroup({
-          id: idx,
+          id: idx + 1,
           name: g,
         })
       );
