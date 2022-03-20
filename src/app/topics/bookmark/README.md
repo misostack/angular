@@ -13,28 +13,37 @@
 
 ## What you will learn
 
+### Component
+
 - [x] Component
 - [x] Lifecycle hooks
 - [x] Text Interpolation
 - [x] Component Communication: Binding, ViewChild, DI Service
 - [x] Component Styles
-- [ ] Sharing data between child and parent directives and components
-- Ng-Content
-- Template Statements
-- Pipes
-- Property Binding
-- Attribute, Class & Style
-- Event Binding
-- Two-way Binding
-- Directives
-- Attribute directives
-- Structural directives
-- Dependency Injection
-- Routing
-- Template Driven Form
-- Reactive Forms
-- Form Validation
-- HTTP Client
+- [x] Sharing data between child and parent directives and components
+- [ ] Ng-Content
+- [ ] Dynamic Components
+- [ ] Angular Elements
+
+### Templates
+
+### Directives
+
+### Dependency Injection
+
+## Forms
+
+## HTTP Client
+
+## Testing
+
+## I18n
+
+## Animation
+
+## Routing & Navigation
+
+## Service Workers & PWA
 
 ## References
 

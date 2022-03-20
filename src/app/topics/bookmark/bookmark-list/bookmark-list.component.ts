@@ -34,6 +34,7 @@ export class BookmarkListComponent
   // subscription: Subscription;
 
   @ViewChild('bookmarkForm') bookmarkForm!: BookmarkFormComponent;
+  // @ViewChild('bookmarkRow') bookmarkRow!: TemplateRef;
 
   // items: Array<{ id: number }> = Array.from(new Array(10)).map((_, idx) => {
   //   return {

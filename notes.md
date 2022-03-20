@@ -1,5 +1,7 @@
 # 100 days Angular
 
+# Component
+
 ## Lifecycle
 
 ![image](https://user-images.githubusercontent.com/31009750/159103996-2d54e455-2ec5-451a-9282-94031c937a7e.png)
@@ -153,9 +155,37 @@ Everytime, user move to another screen and go back to the screen contain this co
 
 https://github.com/angular/angular/blob/master/packages/compiler/src/schema/dom_element_schema_registry.ts#L78
 
+https://www.w3.org/TR/DOM-Level-3-Events-key/#named-key-attribute-values
+
 > Search "click" or "keypress"
 
 **Parent**
 ![image](https://user-images.githubusercontent.com/31009750/159121640-b4962de3-9e62-4e83-9dd3-7db3f305c4c2.png)
 ![image](https://user-images.githubusercontent.com/31009750/159121647-8714ac98-cb05-40d7-9240-690312ec6c31.png)
 ![image](https://user-images.githubusercontent.com/31009750/159121657-5bef5ef6-bf5c-4ee9-a296-ad6e41a918ea.png)
+
+## Content Projection
+
+> Content projection is a pattern in which you insert, or project, the content you want to use inside another component
+
+### Single-slot content projection
+
+![image](https://user-images.githubusercontent.com/31009750/159148526-958f31a2-cf33-42f6-afdd-415b7337ea0b.png)
+![image](https://user-images.githubusercontent.com/31009750/159148530-31d6208f-656b-4a9b-8486-5e9d02e27aa8.png)
+
+### Multi-slot content projection
+
+![image](https://user-images.githubusercontent.com/31009750/159148857-09cbf976-f2bd-4387-823b-38833d247f42.png)
+![image](https://user-images.githubusercontent.com/31009750/159148864-c98d578a-0979-4af8-a279-54e7d08a1b6f.png)
+
+### Conditional content projection
+
+**ng-template**
+
+![image](https://user-images.githubusercontent.com/31009750/159149526-ff56e9f6-d2d6-4f42-a43b-ae84dccf5f4e.png)
+
+**ng-container**
+
+![image](https://user-images.githubusercontent.com/31009750/159149544-381bc7b7-117c-47da-bf31-1e9c250735c2.png)
+
+![image](https://user-images.githubusercontent.com/31009750/159149564-65856b3b-3a40-4fc0-a61d-a3868cd90e1c.png)

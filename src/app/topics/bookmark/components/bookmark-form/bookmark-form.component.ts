@@ -53,6 +53,11 @@ export class BookmarkFormComponent implements OnInit, AfterViewChecked {
         ) as HTMLSelectElement;
         groupSelect.value = `${this.bookmarkItem?.group.id}`;
       }
+      // focus
+      const titleInput = this.form.nativeElement.elements.namedItem(
+        'title'
+      ) as HTMLInputElement;
+      titleInput.focus();
     }
   }
   ngOnInit(): void {}

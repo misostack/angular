@@ -10,7 +10,39 @@
           [name]="''" [count]="items.length" [items]="items"></app-bookmark-counter> -->
         <app-bookmark-form (savedBookmark)="savedBookmark($event)" [bookmarkGroups]="bookmarkGroups" #bookmarkForm>
         </app-bookmark-form>
-        <button class="btn btn-primary" (click)="addNewBookmark()">Add new bookmark</button>
+        <app-bookmark-bars>
+          <div cta class="cta d-flex justify-content-end">
+            <button class="btn btn-primary" (click)="addNewBookmark()">Add new bookmark</button>
+          </div>
+          <div filter class="filter">
+            <form class="d-flex justify-content-between my-4">
+              <select required name="group" class="form-select me-4" aria-label="Default select example">
+                <option value="">Please select group</option>
+                <option *ngFor="let g of bookmarkGroups" value="{{ g.id }}">{{ g.name}}</option>
+              </select>
+              <input required name="s" type="text" class="form-control" id="s" placeholder="search by title, link" />
+            </form>
+          </div>
+          <div pagination class="pagination">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </app-bookmark-bars>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -21,25 +53,30 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let bookmark of bookmarks;">
-              <td scope="row">{{ bookmark.toObject().title }}</td>
-              <td scope="row"><a target="_blank" href="{{ bookmark.toObject().link }}">{{ bookmark.toObject().title
-                  }}</a></td>
-              <td scope="row">{{ bookmark.toObject().group.name }}</td>
-              <td scope="row" data-colname="action">
-                <div>
-                  <button (click)="editBookmark(bookmark)" class="btn-icon" title="Edit">
-                    <span class="material-icons icon icon-warning">edit</span>
-                  </button>
-                  <button (click)="deleteBookmark(bookmark)" class="btn-icon" title="Delete">
-                    <span class="material-icons icon icon-danger">delete</span>
-                  </button>
-                </div>
-              </td>
-            </tr>
+            <ng-container *ngFor="let bookmark of bookmarks;" [ngTemplateOutlet]="bookmarkRow"
+              [ngTemplateOutletContext]="{$implicit: bookmark, className: 'table-row'}"></ng-container>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
+<ng-template #bookmarkRow let-bookmark let-className="className">
+  <tr [ngClass]="className">
+    <td scope="row">{{ bookmark.toObject().title }}</td>
+    <td scope="row"><a target="_blank" href="{{ bookmark.toObject().link }}">{{ bookmark.toObject().title
+        }}</a></td>
+    <td scope="row">{{ bookmark.toObject().group.name }}</td>
+    <td scope="row" data-colname="action">
+      <div>
+        <button (click)="editBookmark(bookmark)" class="btn-icon" title="Edit">
+          <span class="material-icons icon icon-warning">edit</span>
+        </button>
+        <button (click)="deleteBookmark(bookmark)" class="btn-icon" title="Delete">
+          <span class="material-icons icon icon-danger">delete</span>
+        </button>
+      </div>
+    </td>
+  </tr>
+</ng-template>
