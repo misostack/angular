@@ -50,3 +50,4 @@
 - https://www.digitalocean.com/community/tutorials/angular-change-detection-strategy
 - https://www.digitalocean.com/community/tutorials/angular-reusable-components-ngtemplateoutlet
 - https://indepth.dev/posts/1405/ngtemplateoutlet
+- https://www.tektutorialshub.com/angular/ngtemplateoutlet-in-angular/
