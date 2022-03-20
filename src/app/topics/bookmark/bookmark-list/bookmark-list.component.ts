@@ -13,7 +13,12 @@ import {
 import { interval, map, Subscription } from 'rxjs';
 import { BookmarkCounterComponent } from '../components/bookmark-counter/bookmark-counter.component';
 import { BookmarkFormComponent } from '../components/bookmark-form/bookmark-form.component';
-import { Bookmark, BookmarkGroup, BookmarkObject } from '../models/bookmark';
+import {
+  Bookmark,
+  BookmarkGroup,
+  BookmarkObject,
+  ID,
+} from '../models/bookmark';
 import { BookmarkService } from '../services/bookmark.service';
 
 @Component({
@@ -73,6 +78,9 @@ export class BookmarkListComponent
     this.bookmarks = this.bookmarkService.getBookmarks();
     // run only once
     // setInterval(() => {
+    //   this.bookmarks = this.bookmarkService.getBookmarks();
+    // }, 5000);
+    // setInterval(() => {
     //   // this.items = Array.from(new Array(Math.floor(Math.random() * 10) + 10));
     //   // this.items = Array.from(new Array(10));
     //   this.items.pop();
@@ -123,6 +131,9 @@ export class BookmarkListComponent
         }
       }
     }
+  }
+  trackByBookmarks(index: ID, bookmark: Bookmark): ID {
+    return bookmark.id;
   }
 
   ngOnDestroy() {

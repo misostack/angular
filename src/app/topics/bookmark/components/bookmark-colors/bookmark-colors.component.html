@@ -1,4 +1,7 @@
-<div [ngClass]="elementClasses" [ngStyle]="elementStyles">Content</div>
+<h3 *ngIf="title != ''">{{title}}</h3>
+<div *ngIf="currentTime" [ngClass]="elementClasses" [ngStyle]="elementStyles">
+  {{currentTime | date:'HH:mm:ss'}}
+</div>
 <p>
   <select [(ngModel)]="selectedComposite" (ngModelChange)="switchColor($event)">
     <ng-container *ngFor="let composite of composites" [ngTemplateOutlet]="compositeOption"

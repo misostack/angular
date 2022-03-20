@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+  ViewEncapsulation,
+} from '@angular/core';
+import { interval, Subscription } from 'rxjs';
 
 // @Component({
 //   selector: 'app-bookmark-colors',
@@ -33,10 +40,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./bookmark-colors.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class BookmarkColorsComponent implements OnInit {
+export class BookmarkColorsComponent implements OnInit, OnDestroy {
+  @Input() title: string = '';
   elementClasses: { [key: string]: boolean } = {};
   elementStyles: { [key: string]: string } = {};
   selectedComposite: string = '';
+  timer!: Subscription;
+  currentTime?: Date;
   composites = [
     { 'bg-primary': 'text-white' },
     { 'bg-secondary': 'text-white' },
@@ -48,7 +58,11 @@ export class BookmarkColorsComponent implements OnInit {
     { 'bg-dark': 'text-white' },
   ];
 
-  constructor() {}
+  constructor() {
+    this.timer = interval(1000).subscribe(() => {
+      this.currentTime = new Date();
+    });
+  }
 
   ngOnInit(): void {}
 
@@ -81,5 +95,9 @@ export class BookmarkColorsComponent implements OnInit {
       'font-weight':
         Math.floor(Math.random() * 10) % 2 == 0 ? 'bold' : 'lighter',
     };
+  }
+
+  ngOnDestroy(): void {
+    this.timer.unsubscribe();
   }
 }

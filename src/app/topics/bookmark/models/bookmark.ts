@@ -1,4 +1,4 @@
-type ID = string | number;
+export type ID = string | number;
 export interface BookmarkDTO {
   id: ID;
   title: string;

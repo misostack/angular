@@ -208,3 +208,24 @@ https://www.w3.org/TR/DOM-Level-3-Events-key/#named-key-attribute-values
 ### NgModel: Adds two-way data binding to an HTML form element.
 
 ![image](https://user-images.githubusercontent.com/31009750/159155623-56b560b6-7ea6-4dd4-8504-21f9b3d77c0e.png)
+
+## Built-in structural directives
+
+## NgIf
+
+![image](https://user-images.githubusercontent.com/31009750/159161203-cc41d05e-4ab5-48de-ba0b-1b4a61afa3c2.png)
+
+## NgFor
+
+**Without trackby**
+![image](https://user-images.githubusercontent.com/31009750/159160704-4a39d008-102a-4735-b275-8c08c699867b.png)
+
+> When the entire list has been prefetch, entire component will be rerendered
+> ![image](https://user-images.githubusercontent.com/31009750/159160804-901a6323-8172-4884-bbb2-234acd575bb3.png)
+
+**With tracky**
+
+> Only the item changed will be rerendered
+> ![image](https://user-images.githubusercontent.com/31009750/159160835-605d87c0-ef02-4fc1-b6fb-2e73c70a636f.png)
+> ![image](https://user-images.githubusercontent.com/31009750/159160846-937ad649-1da7-4f0e-b33e-203e69b32174.png)
+> ![image](https://user-images.githubusercontent.com/31009750/159160876-3da6331f-29df-4e9e-9fe2-db3a1455a34a.png)
