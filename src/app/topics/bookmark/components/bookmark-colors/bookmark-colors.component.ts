@@ -57,11 +57,28 @@ export class BookmarkColorsComponent implements OnInit, OnDestroy {
     { 'bg-light': 'text-dark' },
     { 'bg-dark': 'text-white' },
   ];
+  technologies = [
+    { name: 'Angular', type: 'FE' },
+    { name: 'ReactJS', type: 'FE' },
+    { name: 'VueJS', type: 'FE' },
+    { name: 'NextJS', type: 'FE' },
+    { name: 'NuxtJS', type: 'FE' },
+    { name: 'Ionic', type: 'FE' },
+    { name: 'Nativescript', type: 'FE' },
+    { name: 'NestJS', type: 'BE' },
+    { name: 'Loopback4', type: 'BE' },
+    { name: 'SailsJS', type: 'BE' },
+    { name: 'Laravel', type: 'BE' },
+    { name: 'MYSQL', type: 'BE' },
+    { name: 'PostgreSQL', type: 'BE' },
+    { name: 'MongoDB', type: 'BE' },
+  ];
+  filters: { FE: boolean; BE: boolean } = { FE: true, BE: true };
 
   constructor() {
-    this.timer = interval(1000).subscribe(() => {
-      this.currentTime = new Date();
-    });
+    // this.timer = interval(1000).subscribe(() => {
+    //   this.currentTime = new Date();
+    // });
   }
 
   ngOnInit(): void {}
@@ -98,6 +115,6 @@ export class BookmarkColorsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.timer.unsubscribe();
+    // this.timer.unsubscribe();
   }
 }
