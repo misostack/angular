@@ -1,1 +1,14 @@
-<p>bookmark-colors works!</p>
+<div [ngClass]="elementClasses" [ngStyle]="elementStyles">Content</div>
+<p>
+  <select [(ngModel)]="selectedComposite" (ngModelChange)="switchColor($event)">
+    <ng-container *ngFor="let composite of composites" [ngTemplateOutlet]="compositeOption"
+      [ngTemplateOutletContext]="{composite: composite}"></ng-container>
+  </select>
+</p>
+<p>
+  <button (click)="switchColor()">Switch color</button>
+</p>
+
+<ng-template #compositeOption let-composite="composite">
+  <option *ngFor="let item of composite |keyvalue" value="{{item.key}}">{{item.key}}</option>
+</ng-template>

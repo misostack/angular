@@ -189,3 +189,22 @@ https://www.w3.org/TR/DOM-Level-3-Events-key/#named-key-attribute-values
 ![image](https://user-images.githubusercontent.com/31009750/159149544-381bc7b7-117c-47da-bf31-1e9c250735c2.png)
 
 ![image](https://user-images.githubusercontent.com/31009750/159149564-65856b3b-3a40-4fc0-a61d-a3868cd90e1c.png)
+
+# Template
+
+# Directives
+
+![image](https://user-images.githubusercontent.com/31009750/159153363-0a9a79a4-22c5-4338-8b88-4c2b3ef59104.png)
+
+## Built-in attribute directives
+
+### NgClass: Adds & Removes Set of CSS Classes
+
+### NgStyle: Adds & Removes Set of HTML Styles
+
+![image](https://user-images.githubusercontent.com/31009750/159154751-b7bca3bc-f506-446b-8f67-f6f3e0d6b732.png)
+![image](https://user-images.githubusercontent.com/31009750/159154766-927ab4f3-5440-4686-bebf-243f76b70f57.png)
+
+### NgModel: Adds two-way data binding to an HTML form element.
+
+![image](https://user-images.githubusercontent.com/31009750/159155623-56b560b6-7ea6-4dd4-8504-21f9b3d77c0e.png)

@@ -21,7 +21,7 @@
 - [x] Component Communication: Binding, ViewChild, DI Service
 - [x] Component Styles
 - [x] Sharing data between child and parent directives and components
-- [ ] Ng-Content
+- [x] Ng-Content
 - [ ] Dynamic Components
 - [ ] Angular Elements
 
