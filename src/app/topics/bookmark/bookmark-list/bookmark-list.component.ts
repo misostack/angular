@@ -36,6 +36,7 @@ export class BookmarkListComponent
   theObject: { name: string } = { name: '' };
   @ViewChild('bookmarkCounterComp')
   bookmarkCounterComponent!: BookmarkCounterComponent;
+  deletedBookmark!: Bookmark;
   // subscription: Subscription;
 
   @ViewChild('bookmarkForm') bookmarkForm!: BookmarkFormComponent;

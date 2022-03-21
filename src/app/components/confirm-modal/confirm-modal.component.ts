@@ -1,7 +1,4 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AppService } from 'src/app/services/app.service';
-
 @Component({
   selector: 'app-confirm-modal',
   templateUrl: './confirm-modal.component.html',
@@ -15,15 +12,17 @@ export class ConfirmModalComponent implements OnInit {
   }
 
   @Input() title!: string;
+  @Input() confirmCallBack!: Function;
   show: boolean = false;
 
   constructor() {}
   ngOnInit(): void {}
-  onOpen() {
+  open() {
     this._open();
   }
   onConfirm() {
     this._close();
+    this.confirmCallBack();
   }
   onClose() {
     this._close();

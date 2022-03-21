@@ -11,6 +11,7 @@ import { BookmarkColorsComponent } from './components/bookmark-colors/bookmark-c
 import { BookmarkFormComponent } from './components/bookmark-form/bookmark-form.component';
 import { BookmarkBarsComponent } from './components/bookmark-bars/bookmark-bars.component';
 import { ConfirmDirective } from './directives/confirm.directive';
+import { ConfirmModalComponent } from 'src/app/components/confirm-modal/confirm-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ConfirmDirective } from './directives/confirm.directive';
     BookmarkFormComponent,
     BookmarkBarsComponent,
     ConfirmDirective,
+    ConfirmModalComponent,
   ],
   imports: [CommonModule, BookmarkRoutingModule, FormsModule],
 })
