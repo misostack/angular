@@ -226,10 +226,19 @@ https://www.w3.org/TR/DOM-Level-3-Events-key/#named-key-attribute-values
 **With tracky**
 
 > Only the item changed will be rerendered
-> ![image](https://user-images.githubusercontent.com/31009750/159160835-605d87c0-ef02-4fc1-b6fb-2e73c70a636f.png)
-> ![image](https://user-images.githubusercontent.com/31009750/159160846-937ad649-1da7-4f0e-b33e-203e69b32174.png)
-> ![image](https://user-images.githubusercontent.com/31009750/159160876-3da6331f-29df-4e9e-9fe2-db3a1455a34a.png)
+> ![image](https://user-images.githubusercontent.com/31009750/159160835-605d87c0-ef02-4fc1-b6fb-2e73c70a636f.png) > ![image](https://user-images.githubusercontent.com/31009750/159160846-937ad649-1da7-4f0e-b33e-203e69b32174.png) > ![image](https://user-images.githubusercontent.com/31009750/159160876-3da6331f-29df-4e9e-9fe2-db3a1455a34a.png)
 
 ## NgSwitch(attr), NgSwitchCase(structural), ng-container
 
 ![image](https://user-images.githubusercontent.com/31009750/159162394-b4dd8f85-5188-4aa5-b9b9-4010bcdfa5f5.png)
+
+## Custom Attribute Directive
+
+![image](https://user-images.githubusercontent.com/31009750/159293831-2806ae5c-8f98-4413-9b8b-502ee0a04cf9.png)
+![image](https://user-images.githubusercontent.com/31009750/159293910-d93b9a3d-79cd-4862-b793-586e16e7cac0.png)
+
+**Angular pass callback function to child component as input**
+
+```ts
+methodName.bind(this, args);
+```

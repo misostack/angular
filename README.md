@@ -10,8 +10,8 @@
 - [x] View Encapsulation
 - [x] Change Detection
 - [x] Component Interaction
-- [ ] Sharing Data Between child and parents
-- [ ] Content Projection: single slot, multi slot
+- [x] Sharing Data Between child and parents
+- [x] Content Projection: single slot, multi slot
 - [ ] Dynamic Component
 - [ ] Angular Element
 

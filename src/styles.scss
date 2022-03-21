@@ -38,3 +38,25 @@ body {
     }
   }
 }
+
+.modal-backdrop {
+  display: none;
+}
+.modal.hidden {
+  display: none !important;
+}
+.modal.show,
+.modal-backdrop.show {
+  display: block;
+}
+.modal.show.modal-dialog-centered {
+  display: flex;
+}
+
+.modal .modal-title {
+  text-transform: capitalize;
+}
+
+.modal .modal-footer {
+  border: none;
+}

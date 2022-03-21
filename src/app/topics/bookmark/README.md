@@ -29,6 +29,10 @@
 
 ### Directives
 
+- [] Component
+- [] Attribute Directive: Change Appearance, behavior of Element/Other Directive
+- [] Structural Directive: Change DOM Layout: adding/removing DOM
+
 ### Dependency Injection
 
 ## Forms

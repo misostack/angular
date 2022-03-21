@@ -73,7 +73,8 @@
         <button (click)="editBookmark(bookmark)" class="btn-icon" title="Edit">
           <span class="material-icons icon icon-warning">edit</span>
         </button>
-        <button (click)="deleteBookmark(bookmark)" class="btn-icon" title="Delete">
+        <button [appConfirm]="deleteBookmark.bind(this,bookmark)" confirmMessage="Are you sure to delete this?"
+          class="btn-icon" title="Delete">
           <span class="material-icons icon icon-danger">delete</span>
         </button>
       </div>
